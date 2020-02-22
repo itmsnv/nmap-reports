@@ -11,6 +11,6 @@ nmap -iL list.txt -p- -sV --dns-servers 192.168.x.x -oN versions.txt &
 echo
 echo "Running UDP port scan of well known port range and Nmap registered"
 echo "ports and outputing to UDP_well_known.txt"
-nmap -sU -iL list.txt -pl-1023 -sV --dns-servers 192.168.x.x -oN UPD_well_known.txt &
+nmap -sU -iL list.txt -p1-1023 -sV --dns-servers 192.168.x.x -oN UPD_well_known.txt &
 wait
 echo "All scans completed."
